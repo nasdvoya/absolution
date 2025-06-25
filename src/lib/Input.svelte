@@ -1,5 +1,6 @@
 <script lang="ts">
 	let {
+		id = '',
 		placeholder = '',
 		required = false,
 		pattern = '^\\d{9}$',
@@ -26,5 +27,13 @@
 </script>
 
 <div>
-	<input class="input focus:outline-none" {placeholder} {required} onblur={validate} oninput={validate} bind:value />
+	<input
+		class="input focus:outline-none"
+		{id}
+		{placeholder}
+		{required}
+		onblur={validate}
+		oninput={validate}
+		bind:value
+	/>
 </div>
